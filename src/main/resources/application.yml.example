@@ -1,0 +1,37 @@
+# ==============================================================================
+# Sample Application Configuration for Spring Boot Application Using abstract-nnp-common
+# ==============================================================================
+
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: ${SERVER_SERVLET_CONTEXT_PATH:/}
+
+spring:
+  application:
+    name: sample-nnp-application
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:nnp_db}?currentSchema=${DB_SCHEMA:common}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: ${DB_DRIVER_CLASS_NAME:org.postgresql.Driver}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      pool-name: NnpHikariCP
+  jpa:
+    show-sql: ${JPA_SHOW_SQL:false}
+    open-in-view: false
+    hibernate:
+      ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:validate}
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: ${DB_SCHEMA:common}
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT:INFO}
+    com.nnp: ${LOGGING_LEVEL_APP:DEBUG}
+    org.hibernate.SQL: ${LOGGING_LEVEL_SQL:INFO}
