@@ -1,4 +1,4 @@
-# PICC - PC - Abstract NNP Common (`abstract-nnp-common`)
+# PICC-PC-Abstract-NNP-Common
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Java Version](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://www.oracle.com/java/)
