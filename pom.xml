@@ -13,7 +13,7 @@
 
     <groupId>com.nnp.common.abs</groupId>
     <artifactId>abstract-nnp-common</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>abstract-nnp-common</name>

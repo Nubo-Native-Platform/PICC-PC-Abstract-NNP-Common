@@ -46,6 +46,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+          server-id: github
+          server-username: GITHUB_ACTOR
+          server-password: GITHUB_TOKEN
 
       - name: Deploy to GitHub Packages
         run: mvn clean deploy -Pgithub-packages -DskipTests
