@@ -18,7 +18,7 @@
 
     <name>abstract-nnp-common</name>
     <description>Open-source reusable common utilities, dynamic domain configuration service, and entity identifier generator for Spring Boot applications</description>
-    <url>https://github.com/your-org/abstract-nnp-common</url>
+    <url>https://github.com/Nubo-Native-Platform/PICC-PC-Abstract-NNP-Common</url>
 
     <licenses>
         <license>
@@ -37,9 +37,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/your-org/abstract-nnp-common.git</connection>
-        <developerConnection>scm:git:ssh://github.com:your-org/abstract-nnp-common.git</developerConnection>
-        <url>https://github.com/your-org/abstract-nnp-common/tree/main</url>
+        <connection>scm:git:git://github.com/Nubo-Native-Platform/PICC-PC-Abstract-NNP-Common.git</connection>
+        <developerConnection>scm:git:ssh://github.com:Nubo-Native-Platform/PICC-PC-Abstract-NNP-Common.git</developerConnection>
+        <url>https://github.com/Nubo-Native-Platform/PICC-PC-Abstract-NNP-Common/tree/main</url>
     </scm>
 
     <properties>
