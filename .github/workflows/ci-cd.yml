@@ -51,7 +51,7 @@ jobs:
           server-password: GITHUB_TOKEN
 
       - name: Deploy to GitHub Packages
-        run: mvn clean deploy -Pgithub-packages -DskipTests -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/Nubo-Native-Platform/PICC-PC-Abstract-NNP-Common
+        run: mvn clean deploy -Pgithub-packages -DskipTests
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
