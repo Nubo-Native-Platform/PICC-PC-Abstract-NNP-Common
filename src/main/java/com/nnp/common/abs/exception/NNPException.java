@@ -15,6 +15,9 @@ public class NNPException extends RuntimeException {
 
 	public NNPException() {
 		super();
+        errCd = null;
+        message = null;
+        debugErrMsg = null;
 	}
 
 	public NNPException(NNPErrorCodes errCd) {
