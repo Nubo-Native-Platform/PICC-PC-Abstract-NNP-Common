@@ -2,13 +2,16 @@ package com.nnp.common.abs.exception;
 
 import lombok.Getter;
 
+import java.io.Serial;
+
 @Getter
 public class NNPException extends RuntimeException {
 
-	private static final long serialVersionUID = 1L;
-	private String errCd;
-	private String message;
-	private String debugErrMsg;
+	@Serial
+    private static final long serialVersionUID = 1L;
+	private final String errCd;
+	private final String message;
+	private final String debugErrMsg;
 
 	public NNPException() {
 		super();

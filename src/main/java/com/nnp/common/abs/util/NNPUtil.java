@@ -10,9 +10,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class NNPUtil {
-
+    private NNPUtil() {}
     public static boolean isBlankOrNull(String s){
-        return s == null || s.trim().length() == 0;
+        return s == null || s.isEmpty();
     }
 
 

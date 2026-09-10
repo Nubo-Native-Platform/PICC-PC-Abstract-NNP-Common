@@ -6,7 +6,6 @@ import com.nnp.common.abs.features.domainvalues.vo.ConfigDomainSetVO;
 import com.nnp.common.abs.features.domainvalues.vo.ConfigDomainVO;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,15 +15,17 @@ import java.util.TreeMap;
 @Slf4j
 public class ConfigDomainServiceImpl implements IConfigDomainService {
 
-	@Autowired
-	private ConfigDomainRepository configDomainRepository;
 
+	private ConfigDomainRepository configDomainRepository;
+    public ConfigDomainServiceImpl(ConfigDomainRepository configDomainRepository) {
+        this.configDomainRepository = configDomainRepository;
+    }
 	public ConfigDomainSetVO fetchDomains(){
 		ConfigDomainSetVO cfgSet = new ConfigDomainSetVO();
 
-		configDomainRepository.findAllOrdered().ifPresent(rcfgs-> {
-			this.fillDomainSet(cfgSet ,rcfgs);
-		});
+		configDomainRepository.findAllOrdered().ifPresent(rcfgs->
+			this.fillDomainSet(cfgSet ,rcfgs)
+		);
 		return cfgSet;
 	}
 
@@ -45,6 +46,6 @@ public class ConfigDomainServiceImpl implements IConfigDomainService {
 				vo.setChildren(new ConfigDomainSetVO());
 				this.fillDomainSet(vo.getChildren(), rcfg.getChildren());
 			}
-		};
+		}
 	}
 }
